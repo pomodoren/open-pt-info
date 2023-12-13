@@ -1,0 +1,34 @@
+{
+    "query": {
+        "bbox": {
+            "n": "41.3765",
+            "s": "41.2006",
+            "e": "19.8816",
+            "w": "19.7569"
+        },
+        "tags": {
+            "route": "bus"
+        }
+    },
+    "stops": {
+        "name_without": "Stop w/ no name",
+        "name_auto": "yes"
+    },
+    "agency": {
+        "agency_id": "AL-Tirana",
+        "agency_name": "Tirana Public Transport",
+        "agency_url": "https://www.tirana.al/en/services/public-transport",
+        "agency_timezone": "Europe/Tirane",
+        "agency_lang": "sq",
+        "agency_phone": "+355 (0) 42 223 334",
+        "agency_fare_url": "https://www.tirana.al/en/services/public-transport"
+    },
+    "feed_info": {
+        "publisher_name": "Municipality",
+        "publisher_url": "https://tirana.al",
+        "version":  "1.0"
+    },
+    "schedule_source": "tirana.timetable.json",
+    "output_file": "data/al-tirana.zip",
+    "selector": "al_tirana"
+}
