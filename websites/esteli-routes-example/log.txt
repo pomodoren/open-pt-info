@@ -1,0 +1,15 @@
+Feed Version: 0.1
+GTFS-to-HTML Version: 2.5.1
+Date Generated: Wed Dec 13 2023 20:02:48 GMT+0000 (Coordinated Universal Time)
+Timetable Page Count: 12
+Timetable Count: 12
+Calendar Service ID Count: 12
+Route Count: 12
+Trip Count: 1266
+Stop Count: 445
+Source: /tmp/tmp-27577-OpnwsPuFbOVk/1789f657-a3ad-4a3a-a6e7-d4bd776bc2d4-gtfs.zip
+
+Warnings:
+No timetables found for timetable_page_id=5|0000001
+No timetables found for timetable_page_id=4|0000001
+No timetables found for timetable_page_id=3|0000001
