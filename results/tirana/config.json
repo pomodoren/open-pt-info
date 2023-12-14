@@ -28,7 +28,7 @@
         "publisher_url": "https://tirana.al",
         "version":  "1.0"
     },
-    "schedule_source": "../../results/frequency2timetable/tirana/timetable.json",
-    "output_file": "../../results/tirana/tirana_gtfs.zip",
+    "schedule_source": "results/frequency2timetable/tirana/timetable.json",
+    "output_file": "results/tirana/tirana_gtfs.zip",
     "selector": "al_tirana"
 }

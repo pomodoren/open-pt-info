@@ -7,6 +7,860 @@ INFO:root:Routes creator: Default
 INFO:root:Stops creator: Default
 INFO:root:Schedule creator: Default
 INFO:root:Trips creator: Default
+INFO:root:Query and build fresh data for stops
+INFO:root:(
+            /* Obtain route variants based on tags and bounding box */
+            relation['route' = 'bus'](41.2006,19.7569,41.3765,19.8816);
+
+            /*  Query for relation elements with role platform */
+            node(r:"platform")->.nodes;
+            way(r:"platform");
+            node(w);
+
+            /* Select all result sets  */
+            ( .nodes;._; );
+
+            /* Return tags for elements */
+            );out body;
+
+            /* Select stop area relations */
+            foreach.nodes(
+            rel(bn:"platform")["public_transport"="stop_area"];
+            out body;
+            );
+WARNING:root:Warning: Potential stop is invalid and has been ignored.
+WARNING:root: Check tagging: https://osm.org/node/11224425709
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892743
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892742
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892674
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7843409
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842884
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842873
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7843008
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842874
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7843006
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7826287
+
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7826497
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889892
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9392908
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826496
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888149
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888150
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888152
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889893
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889894
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888151
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9385593
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888153
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826015
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826495
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889891
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826047
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826524
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384201
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829051
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16369488
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16369431
+
+ERROR:root:Station member was not found in data
+ERROR:root: https://osm.org/relation/16369487
+ERROR:root: https://osm.org/node/11212787649
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16369487
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16376849
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7874906
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16369356
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16369430
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886023
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886106
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886024
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886107
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16706462
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874904
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874905
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886022
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886105
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826101
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826523
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829049
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829308
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829048
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829047
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9392909
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829309
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829310
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826629
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826100
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7933268
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/8004312
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840640
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841054
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841053
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826102
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840641
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7933266
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7933267
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/8004310
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/8004311
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829312
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829046
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829045
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841072
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840643
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841071
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874903
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16376777
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829313
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828854
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840644
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841124
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7877276
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886104
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16706461
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826627
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826106
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826628
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840645
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829296
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826112
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826626
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7843005
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874902
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7877277
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923804
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886025
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7886108
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923802
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16706599
+
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16706600
+
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7886026
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9385175
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915926
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915984
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915982
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915927
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915928
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915983
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915931
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915930
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923751
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16706491
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915929
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915980
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923807
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16706532
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915979
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16706511
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915932
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915933
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915978
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930380
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930381
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930494
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930495
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923748
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7923750
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930382
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930493
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829294
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841123
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828852
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828851
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829295
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828853
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915934
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871582
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915935
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871581
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7915936
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840616
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7821693
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826114
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396282
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841122
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841121
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840617
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871580
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906312
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396283
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396284
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396289
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871584
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16391181
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871583
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930351
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930352
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396287
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396290
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930350
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871585
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871586
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930349
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930383
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930492
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906309
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906311
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840618
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841120
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904573
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9390671
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396285
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396286
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396291
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9396292
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7871399
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871587
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7930347
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930348
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930384
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930491
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871400
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930346
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16390815
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888499
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7888497
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888146
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7888147
+
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7888501
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889897
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7888494
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892677
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892739
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/9385603
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892678
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892738
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892675
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892741
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892676
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892740
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888148
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889895
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888145
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889898
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7892737
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828841
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828842
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829304
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829305
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7888144
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7932632
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7932633
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/8004183
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828843
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7892680
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829303
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888143
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7889900
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911604
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7906313
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9390669
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9390670
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904572
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906314
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904571
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906315
+ERROR:root:Station member was not found in data
+ERROR:root: https://osm.org/relation/7911306
+ERROR:root: https://osm.org/node/11220615603
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911306
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911304
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911305
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911600
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911601
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16382797
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911303
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911602
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828845
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829301
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7933269
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/8004182
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841055
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7828846
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840639
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829302
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828844
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911302
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911559
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911605
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911606
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911555
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911556
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911557
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911558
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911607
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911608
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911609
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911610
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7888142
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828848
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829299
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828847
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841057
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7829298
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828849
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840511
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842875
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871579
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842877
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930353
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384205
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384206
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384209
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871577
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7871578
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930354
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7930355
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384207
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384210
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384211
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842879
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9392907
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904569
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904570
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906316
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826115
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826651
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828850
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821323
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821694
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842465
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840523
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842876
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9384204
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7842466
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7840521
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826117
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826137
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826650
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826678
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840522
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841133
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840549
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821322
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828695
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840520
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7840550
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7841118
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7841119
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/8004309
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906308
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906307
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821321
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821696
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904574
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904575
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7935650
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16374193
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16374194
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16374249
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826151
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/7826677
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821319
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821698
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7849084
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826152
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826676
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874897
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874899
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7877279
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9385009
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826153
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826680
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874900
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7877278
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16738219
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7874896
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7877281
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911660
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911667
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904576
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904577
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906305
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906306
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/16374195
+
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16374248
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904578
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904579
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906303
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906304
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821318
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7828696
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904580
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904581
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906300
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906301
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904582
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904583
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906299
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7906302
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821317
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7821700
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826154
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7826234
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7849083
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7870950
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16611413
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911661
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911668
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7870951
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7870953
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16611412
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16681919
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16611410
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/16611411
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911662
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911666
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911663
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7911665
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/9392904
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/7904584
+INFO:root:* Found alternative stop name: Sheshi Rekreativ Komuna e Parisit - https://osm.org/node/5320306899
+INFO:root:* Found alternative stop name: DHL - https://osm.org/node/5333329252
+INFO:root:* Found alternative stop name: DHL - https://osm.org/node/5333387622
+INFO:root:* Found alternative stop name: Vodafone - https://osm.org/node/10920253565
+INFO:root:* Found alternative stop name: Vodafone - https://osm.org/node/10920253566
+INFO:root:* Found alternative stop name: Ford - https://osm.org/node/10920253569
+INFO:root:* Found alternative stop name: Ford - https://osm.org/node/10920253570
+INFO:root:* Found alternative stop name: Fedex - https://osm.org/node/10920283006
+INFO:root:* Found alternative stop name: Fedex - https://osm.org/node/10920283007
+INFO:root:* Found alternative stop name: Mene - https://osm.org/node/10920283010
+INFO:root:* Found alternative stop name: Mene - https://osm.org/node/10920283011
+INFO:root:* Found alternative stop name: Mark Hotel - https://osm.org/node/10920296237
+INFO:root:* Found alternative stop name: Mark Hotel - https://osm.org/node/10920296238
+INFO:root:* Found alternative stop name: Dea Print - https://osm.org/node/10920296244
+INFO:root:* Found alternative stop name: Dea Print - https://osm.org/node/10920296245
 INFO:root:Added stop: Karburanti - https://osm.org/relation/7843409
 INFO:root:Added stop: Kombinat - https://osm.org/relation/7826287
 INFO:root:Added stop: Mapo - https://osm.org/relation/7826497
@@ -498,132 +1352,213 @@ INFO:root:Added stop: Mbikalimi - https://osm.org/node/11357375921
 INFO:root:Added stop: Mbikalimi - https://osm.org/node/11357375922
 INFO:root:Added stop: Sauk i Vjetër - https://osm.org/node/11357375923
 INFO:root:Added stop: Sauk i Vjetër - https://osm.org/node/11357375925
-INFO:root:
-Generating schedule for line: [L10B] - Bus L10/B: Qendër - Mihal Grameno
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L10B Qendër] (added 0 trips, serving 12 stops) - https://osm.org/relation/9396293
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L10B Qendër] (added 0 trips, serving 10 stops) - https://osm.org/relation/9396288
-INFO:root:
-Generating schedule for line: [L10C] - Bus L10/C: Rrethrotullimi Shkozë - Ish - Fusha e Aviacionit
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L10C Rrethrotullimi Shkozë] (added 0 trips, serving 17 stops) - https://osm.org/relation/7930607
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L10C Ish - Fusha e Aviacionit] (added 0 trips, serving 18 stops) - https://osm.org/relation/8004184
-INFO:root:
-Generating schedule for line: [L11] - Bus L11: Qendër - Porcelan - Qendër
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L11 Porcelan] (added 0 trips, serving 13 stops) - https://osm.org/relation/7516807
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L11 Qendër] (added 0 trips, serving 14 stops) - https://osm.org/relation/7517386
-INFO:root:
-Generating schedule for line: [L12] - Bus L12: Uzina Dinamo - Sharrë
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L12 Sharrë] (added 0 trips, serving 25 stops) - https://osm.org/relation/9384264
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L12 Uzina Dinamo] (added 0 trips, serving 26 stops) - https://osm.org/relation/7842960
-INFO:root:
-Generating schedule for line: [L13] - Bus L13: Tirana e Re
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L13 Harry Fultz] (added 0 trips, serving 20 stops) - https://osm.org/relation/7829084
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L13 15 Katëshi] (added 0 trips, serving 25 stops) - https://osm.org/relation/7828855
-INFO:root:
-Generating schedule for line: [L15] - Bus L15:  Kombinat - Kinostudio/Tufine
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L15 Tufine] (added 0 trips, serving 24 stops) - https://osm.org/relation/14759854
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L15 Kombinat] (added 0 trips, serving 25 stops) - https://osm.org/relation/14759853
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L15 Kinostudio] (added 0 trips, serving 19 stops) - https://osm.org/relation/7824023
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L15 Kombinat] (added 0 trips, serving 17 stops) - https://osm.org/relation/7826235
-INFO:root:
-Generating schedule for line: [L16] - Bus L16: Linja e Gjelbër
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L16 Dispanseria] (added 0 trips, serving 19 stops) - https://osm.org/relation/7841014
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L16 Harry Fultz] (added 0 trips, serving 19 stops) - https://osm.org/relation/7840512
-INFO:root:
-Generating schedule for line: [L1A] - Bus L1: Allias - Selitë/Kodra e Diellit 2
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L1A Allias (Abedic Çiçi)] (added 0 trips, serving 22 stops) - https://osm.org/relation/7874544
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L1A Selitë] (added 0 trips, serving 21 stops) - https://osm.org/relation/7877097
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L1A Kodra e Diellit 2] (added 0 trips, serving 20 stops) - https://osm.org/relation/16369029
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L1A Allias] (added 0 trips, serving 23 stops) - https://osm.org/relation/16369030
-INFO:root:
-Generating schedule for line: [L2] - Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit
-INFO:root: Itinerary: [L2 Barrikadat] (added 78 trips, serving 12 stops) - https://osm.org/relation/7885875
-INFO:root: Itinerary: [L2 TEG (Tirana East Gate)] (added 78 trips, serving 11 stops) - https://osm.org/relation/7886110
-INFO:root:
-Generating schedule for line: [L3A] - L3/A: Astir
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L3A Astir] (added 0 trips, serving 29 stops) - https://osm.org/relation/7888583
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L3A Astir] (added 0 trips, serving 28 stops) - https://osm.org/relation/7886310
-INFO:root:
-Generating schedule for line: [L3B] - Bus L3/B: Yrshek
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L3B Qendër] (added 0 trips, serving 22 stops) - https://osm.org/relation/9385596
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L3B Yrshek] (added 0 trips, serving 21 stops) - https://osm.org/relation/9385607
-INFO:root:
-Generating schedule for line: [L4] - Bus L4: Qendër - City Park
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L4 City Park] (added 0 trips, serving 20 stops) - https://osm.org/relation/7890488
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L4 Qendër] (added 0 trips, serving 22 stops) - https://osm.org/relation/7892719
-INFO:root:
-Generating schedule for line: [L5A] - Bus L5/A: Ish-Kombinati i Autotraktorëve - Qendër
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L5A Qendër] (added 0 trips, serving 19 stops) - https://osm.org/relation/16327437
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L5A Ish-Kombinati i Autotraktorëve] (added 0 trips, serving 17 stops) - https://osm.org/relation/16327438
-INFO:root:
-Generating schedule for line: [L5B] - Bus L5/B: Institut - Qendër
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L5B Institut] (added 0 trips, serving 13 stops) - https://osm.org/relation/8324455
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L5B Qendër] (added 0 trips, serving 15 stops) - https://osm.org/relation/7906310
-INFO:root:
-Generating schedule for line: [L6] - Bus L6: Laprakë - Qendër
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L6 15 Katëshi] (added 0 trips, serving 15 stops) - https://osm.org/relation/7906340
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L6 Laprakë] (added 0 trips, serving 14 stops) - https://osm.org/relation/7911611
-INFO:root:
-Generating schedule for line: [L8] - Bus L8: Qendër - Sauk i Vjetër/ Sanatorium/TEG
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 TEG (Tirana East Gate)] (added 0 trips, serving 14 stops) - https://osm.org/relation/7915830
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 Qendër] (added 0 trips, serving 13 stops) - https://osm.org/relation/7915985
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 Sanatorium] (added 0 trips, serving 11 stops) - https://osm.org/relation/7923752
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 Qendër] (added 0 trips, serving 9 stops) - https://osm.org/relation/7923749
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 Sauk i Vjetër] (added 0 trips, serving 12 stops) - https://osm.org/relation/7923808
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L8 Qendër] (added 0 trips, serving 11 stops) - https://osm.org/relation/7923803
-INFO:root:
-Generating schedule for line: [L9] - Bus L9: Qyteti Studenti/Vilat Gjermane – Jordan Misja
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L9 Shefqet Ndroqi] (added 0 trips, serving 20 stops) - https://osm.org/relation/7930152
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L9 Shinat e Trenit] (added 0 trips, serving 21 stops) - https://osm.org/relation/7924404
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L9 Shinat e Trenit] (added 0 trips, serving 20 stops) - https://osm.org/relation/7930385
-WARNING:root:Route not found in schedule.
-INFO:root: Itinerary: [L9 Shefqet Ndroqi] (added 0 trips, serving 20 stops) - https://osm.org/relation/7930496
-INFO:root:
-Total of added trips to this GTFS: 156
+INFO:root:Query and build fresh data for routes
+INFO:root:(
+            /* Obtain route variants based on tags and bounding box */
+            relation['route' = 'bus'](41.2006,19.7569,41.3765,19.8816)->.routes;
 
+            /*  Query for related route masters */
+            relation[type=route_master](br.routes)->.masters;
 
-INFO:root:Removed 439 unused stops
-INFO:root:Removed 16 unused routes
-All services are defined on a weekly basis from 2023-12-01 to 2024-11-30 with
-no single day variations. If there are exceptions such as holiday service
-dates please ensure they are listed in calendar_dates.txt
+            /* Query for routes' geometry (ways and it's nodes) */
+            way(r.routes);
+            node(w);
+
+            /* Select all result sets  */
+            ( .routes;.masters;._; );
+
+            /* Return tags for elements and roles for relation members. */
+            );out body;
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7516807
+WARNING:root:  Problem at: https://osm.org/way/470415877
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7517386
+WARNING:root:  Problem at: https://osm.org/way/478500667
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7829084
+WARNING:root:  Problem at: https://osm.org/way/1082392366
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7828855
+WARNING:root:  Problem at: https://osm.org/way/552868964
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/7829085
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/5330787339
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7874544
+WARNING:root:  Problem at: https://osm.org/way/471096494
+WARNING:root:Unknown type of itinerary member: <overpy.RelationRelation ref=16369487 role=platform>
+WARNING:root:Route has non-matching ways: https://osm.org/relation/16369029
+WARNING:root:  Problem at: https://osm.org/way/733427268
+WARNING:root:RouteVariant without 'ref': 16369030
+WARNING:root:Route has non-matching ways: https://osm.org/relation/16369030
+WARNING:root:  Problem at: https://osm.org/way/624093873
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/7877268
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/5320306896
+WARNING:root:Relation without 'ref'. Please fix in OpenStreetMap
+WARNING:root: https://osm.org/relation/7877268
+WARNING:root:Using 'ref' from member variant instead
+WARNING:root:https://osm.org/relation/7874544
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7877268
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7877268
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7885875
+WARNING:root:  Problem at: https://osm.org/way/317208519
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7886110
+WARNING:root:  Problem at: https://osm.org/way/317208514
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/7886111
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/3376164597
+WARNING:root:Route has non-matching ways: https://osm.org/relation/9385596
+WARNING:root:  Problem at: https://osm.org/way/547930052
+WARNING:root:Route has non-matching ways: https://osm.org/relation/9385607
+WARNING:root:  Problem at: https://osm.org/way/551904504
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7890488
+WARNING:root:  Problem at: https://osm.org/way/730335711
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/7892733
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/10920238059
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7911611
+WARNING:root:  Problem at: https://osm.org/way/459205972
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7915985
+WARNING:root:  Problem at: https://osm.org/way/727584078
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7923808
+WARNING:root:  Problem at: https://osm.org/way/1224668661
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7923803
+WARNING:root:  Problem at: https://osm.org/way/1163866763
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7915986
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7930152
+WARNING:root:  Problem at: https://osm.org/way/555397120
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7924404
+WARNING:root:  Problem at: https://osm.org/way/550622097
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7930385
+WARNING:root:  Problem at: https://osm.org/way/676425793
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7930496
+WARNING:root:  Problem at: https://osm.org/way/555397120
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7930156
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7930156
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7930156
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/7930156
+WARNING:root:Unknown type of itinerary member: <overpy.RelationRelation ref=16374311 role=platform>
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7930607
+WARNING:root:  Problem at: https://osm.org/way/1207734912
+WARNING:root:Route has non-matching ways: https://osm.org/relation/8004184
+WARNING:root:  Problem at: https://osm.org/way/464186948
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7842960
+WARNING:root:  Problem at: https://osm.org/way/676919295
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/1207645192
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/554002386
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/175334456
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/670005939
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/458859577
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/553464729
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/469927077
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/624724664
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/469773341
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/670005932
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/1207642181
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/458516473
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/1207643109
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/457933451
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/551660469
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/458859561
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/173434427
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/624093873
+WARNING:root:Route has non-matching ways: https://osm.org/relation/9396293
+WARNING:root:  Problem at: https://osm.org/way/229347215
+WARNING:root:Route has non-matching ways: https://osm.org/relation/9396288
+WARNING:root:  Problem at: https://osm.org/way/727918249
+WARNING:root:Warning: This relation route master:
+WARNING:root: https://osm.org/relation/9396295
+WARNING:root: has a member which is not a valid itinerary:
+WARNING:root: https://osm.org/relation/5323703985
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7888583
+WARNING:root:  Problem at: https://osm.org/way/554002386
+WARNING:root:Route has non-matching ways: https://osm.org/relation/16327438
+WARNING:root:  Problem at: https://osm.org/way/1207643109
+WARNING:root:Route has non-matching ways: https://osm.org/relation/14759854
+WARNING:root:  Problem at: https://osm.org/way/552713982
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7824023
+WARNING:root:  Problem at: https://osm.org/way/45316017
+WARNING:root:Route has non-matching ways: https://osm.org/relation/7826235
+WARNING:root:  Problem at: https://osm.org/way/729162837
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/16336058
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/16336058
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/16336058
+WARNING:root:Itinerary ID doesn't match line ID. Please fix in OSM.
+WARNING:root:https://osm.org/relation/16336058
+INFO:root:Load schedule source information from ../../results/frequency2timetable/tirana/timetable.json
+ERROR:root:Couldn't find schedule_source file.

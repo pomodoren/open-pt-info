@@ -49,8 +49,8 @@ cd osm2gtfs
 # clean previous data
 rm -rf data
 
-osm2gtfs -c ../../results/tirana/config.json > ../../results/osm-issues/logging.tirana.txt 2>&1
-# osm2gtfs -c ../../results/prishtina/config.json > ../../results/osm-issues/logging.prishtina.txt 2>&1
+osm2gtfs -c results/tirana/config.json > results/osm-issues/logging.tirana.txt 2>&1
+# osm2gtfs -c results/prishtina/config.json > results/osm-issues/logging.prishtina.txt 2>&1
 ```
 
 

@@ -85,7 +85,7 @@ WARNING:root:  Problem at: https://osm.org/way/405288259
 WARNING:root:Route with existing route_id (ref)
 WARNING:root: https://osm.org/relation/10219970
 WARNING:root: Skipped. Please fix in OpenStreetMap
-INFO:root:Load schedule source information from ../../results/frequency2timetable/prishtina/timetable.json
+INFO:root:Load schedule source information from results/frequency2timetable/prishtina/timetable.json
 INFO:root:
 Generating schedule for line: [] - Prizren - Prishtina bus station
 WARNING:root:Route not found in schedule.
@@ -576,4 +576,4 @@ The trip with the trip_id "153" doesn't have any stop times defined.
 The trip with the trip_id "154" doesn't have any stop times defined.
 The trip with the trip_id "155" doesn't have any stop times defined.
 The shapes with the following shape_ids aren't used by any trips:
-relation/10118965, relation/10118966
+relation/10118966, relation/10118965
