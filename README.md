@@ -30,7 +30,7 @@ cd tools
 ```sh
 # create frequency
 git clone https://github.com/mapanica/easy-timetable-generator 
-python3 easy-timetable-generator/convert.py -f tirana
+cd easy-timetable-generator
 
 # creating schedules
 python3 easy-timetable-generator/convert.py -f tirana
