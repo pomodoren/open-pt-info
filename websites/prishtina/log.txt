@@ -1,0 +1,38 @@
+Feed Version: 1.0
+GTFS-to-HTML Version: 2.5.1
+Date Generated: Thu Dec 14 2023 09:54:00 GMT+0000 (Coordinated Universal Time)
+Timetable Page Count: 1
+Timetable Count: 1
+Calendar Service ID Count: 1
+Route Count: 1
+Trip Count: 27
+Stop Count: 8
+Source: /tmp/tmp-28574-LOQI8ls7IW6m/7f59977c-8fac-4788-b3f5-7ac0c8e6804f-gtfs.zip
+
+Warnings:
+No stoptimes found for trip_id=52, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=51, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=50, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=49, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=48, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=47, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=46, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=45, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=44, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=43, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=42, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=41, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=40, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=39, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=38, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=37, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=36, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=35, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=34, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=33, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=32, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=31, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=30, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=29, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=28, route_id=1A, timetable_id=1A|1111110
+No stoptimes found for trip_id=27, route_id=1A, timetable_id=1A|1111110
