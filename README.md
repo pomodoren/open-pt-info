@@ -18,9 +18,9 @@ Visualizations:
 - Make sure OSM data is correct:
     - Order of Stations is correct 
     - From and To is same to From and To that you have defined in the frequencies table
-    - Via is defined (in case no error comes up - might be related to this)
+    - Via is defined (in case no error comes up - might be related to this) 
 - Make sure you have cleaned up after error in osm2gtfs
-    - the data is cached under data/
+    - the data is cached under data/ - `cd tools/osm2gtfs; rm -rf data`
 -  python3 unpickling.py - for debugging routes
 
 

@@ -5,14 +5,14 @@
         "1A": [
             {
                 "exceptions": [],
-                "from": "Aeroporti Ndërkombëtar i Prishtinës",
+                "from": "Prishtina International Airport",
                 "services": [
                     "Mo-Sa"
                 ],
                 "stations": [
-                    "Aeroporti Ndërkombëtar i Prishtinës",
-                    "Rrethi Fushë Kosovë",
+                    "Prishtina International Airport",
                     "Sllatinë (mbi rrethrrotullim)",
+                    "Rrethi Fushë Kosovë",
                     "Stacioni i Autobusëve në Prishtinë"
                 ],
                 "times": [
@@ -485,8 +485,7 @@
                         "19:25"
                     ]
                 ],
-                "to": "Stacioni i Autobusëve në Prishtinë",
-                "via": "Rrethi Fushë Kosovë;Sllatinë (mbi rrethrrotullim)"
+                "to": "Stacioni i Autobusëve në Prishtinë"
             },
             {
                 "exceptions": [],
@@ -496,9 +495,9 @@
                 ],
                 "stations": [
                     "Stacioni i Autobusëve në Prishtinë",
-                    "Sllatinë (mbi rrethrrotullim)",
                     "Rrethi Fushë Kosovë",
-                    "Aeroporti Ndërkombëtar i Prishtinës"
+                    "Sllatinë (mbi rrethrrotullim)",
+                    "Prishtina International Airport"
                 ],
                 "times": [
                     [
@@ -970,8 +969,7 @@
                         "19:25"
                     ]
                 ],
-                "to": "Aeroporti Ndërkombëtar i Prishtinës",
-                "via": "Sllatinë (mbi rrethrrotullim);Rrethi Fushë Kosovë"
+                "to": "Prishtina International Airport"
             }
         ]
     },
