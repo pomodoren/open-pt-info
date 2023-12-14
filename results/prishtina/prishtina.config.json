@@ -1,10 +1,10 @@
 {
     "query": {
         "bbox": {
-            "n": "42.6973",
-            "s": "42.6125",
-            "e": "21.2101",
-            "w": "21.1015"
+            "n": "42.62066",
+            "s": "42.55210",
+            "e": "21.13050",
+            "w": "21.00551"
         },
         "tags": {
             "route": "bus"
@@ -18,7 +18,7 @@
         "agency_id": "KS-Prishtina",
         "agency_name": "Trafiku Urban PR",
         "agency_url": "https://trafikurban-pr.com/",
-        "agency_timezone": "Europe/Prishtina",
+        "agency_timezone": "Europe/Tirane",
         "agency_lang": "sq",
         "agency_phone": "--",
         "agency_fare_url": "https://trafikurban-pr.com/"
@@ -28,7 +28,7 @@
         "publisher_url": "https://prishtinaonline.com/",
         "version":  "1.0"
     },
-    "schedule_source": "prishtina.generated.timetable.json",
-    "output_file": "prishtina_gtfs.zip",
+    "schedule_source": "../../results/prishtina/prishtina.generated.timetable.json",
+    "output_file": "../../results/prishtina/prishtina_gtfs.zip",
     "selector": "prishtina"
 }

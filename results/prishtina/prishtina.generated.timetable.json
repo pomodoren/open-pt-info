@@ -2,16 +2,16 @@
     "end_date": "2024-01-01",
     "excluded_lines": [],
     "lines": {
-        "3C": [
+        "1A": [
             {
                 "exceptions": [],
-                "from": "Sinidoll, Rr. 'I. Kelmendi'",
+                "from": "Aeroporti Ndërkombëtar i Prishtinës",
                 "services": [
                     "Mo-Sa"
                 ],
                 "stations": [
-                    "Sinidoll, Rr. 'I. Kelmendi'",
-                    "Nënstacioni i Termokosit në Bregun e Diellit"
+                    "Aeroporti Ndërkombëtar i Prishtinës",
+                    "Stacioni i Autobusëve në Prishtinë"
                 ],
                 "times": [
                     [
@@ -327,7 +327,7 @@
                         "19:25"
                     ]
                 ],
-                "to": "Nënstacioni i Termokosit në Bregun e Diellit"
+                "to": "Stacioni i Autobusëve në Prishtinë"
             }
         ]
     },
