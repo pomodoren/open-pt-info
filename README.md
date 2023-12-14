@@ -54,7 +54,6 @@ osm2gtfs -c results/tirana/config.json > results/osm-issues/logging.tirana.txt 2
 ```
 
 
-
 ## Notes on possible issues
 
 - Make sure OSM data is correct:
@@ -77,3 +76,16 @@ osm2gtfs -c results/tirana/config.json > results/osm-issues/logging.tirana.txt 2
                     stops.append(stop)
                 break
 ```
+
+
+### Sneak Peek
+
+
+
+| Example| Example per line |
+| --|--|
+| ![](docs/example.png) | ![](docs/example-line.png) |
+| **Tirana - L2** | **Prishtina - L1A** |
+| ![](docs/tirana.png) | ![](docs/prishtina.png) |
+
+
