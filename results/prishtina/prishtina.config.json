@@ -28,7 +28,7 @@
         "publisher_url": "https://prishtinaonline.com/",
         "version":  "1.0"
     },
-    "schedule_source": "../../results/prishtina/prishtina.generated.timetable.json",
+    "schedule_source": "../../results/frequency2timetable/prishtina/timetable.json",
     "output_file": "../../results/prishtina/prishtina_gtfs.zip",
     "selector": "prishtina"
 }
