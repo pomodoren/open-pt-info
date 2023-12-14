@@ -13,4 +13,6 @@ python3 easy-timetable-generator/convert.py -f prishtina
 cp -r data/* ../results/frequency2timetable/
 
 # git clone https://github.com/Jungle-Bus/osm2gtfs
-# osm2gtfs -c ../../results/prishtina/prishtina.config.json 
+osm2gtfs -c ../../results/tirana/config.json > ../../osm-issues/logging.tirana.txt 2>&1
+osm2gtfs -c ../../results/prishtina/config.json > ../../osm-issues/logging.prishtina.txt 2>&1
+

@@ -12,6 +12,48 @@ Visualizations:
 
 <br><hr><br>
 
+### Setup
+
+Prepare environment
+
+```sh
+#!/bin/sh
+python3 -m venv venv
+
+# keep things separate
+mkdir tools
+cd tools
+```
+
+### From Frequency get timetable
+
+```sh
+# create frequency
+git clone https://github.com/mapanica/easy-timetable-generator 
+python3 easy-timetable-generator/convert.py -f tirana
+
+# creating schedules
+python3 easy-timetable-generator/convert.py -f tirana
+cp -r data/* ../results/frequency2timetable/
+```
+
+### Create GTFS
+
+```sh
+git clone https://github.com/Jungle-Bus/osm2gtfs
+cd osm2gtfs
+
+# check issues if Via not proper
+# read below common issues
+
+# clean previous data
+rm -rf data
+
+osm2gtfs -c ../../results/tirana/config.json > ../../results/osm-issues/logging.tirana.txt 2>&1
+# osm2gtfs -c ../../results/prishtina/config.json > ../../results/osm-issues/logging.prishtina.txt 2>&1
+```
+
+
 
 ## Notes on possible issues
 

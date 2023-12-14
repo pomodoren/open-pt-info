@@ -1,0 +1,579 @@
+INFO:root:Using the generated start date: 20231201
+INFO:root:Using the generated end date: 20241130
+WARNING:root:Date range is more than one year.
+INFO:root:Agency creator: Default
+INFO:root:Feed info creator: Default
+INFO:root:Routes creator: Default
+INFO:root:Stops creator: Default
+INFO:root:Schedule creator: Default
+INFO:root:Trips creator: Default
+INFO:root:Query and build fresh data for stops
+INFO:root:(
+            /* Obtain route variants based on tags and bounding box */
+            relation['route' = 'bus'](42.55210,21.00451,42.62066,21.13050);
+
+            /*  Query for relation elements with role platform */
+            node(r:"platform")->.nodes;
+            way(r:"platform");
+            node(w);
+
+            /* Select all result sets  */
+            ( .nodes;._; );
+
+            /* Return tags for elements */
+            );out body;
+
+            /* Select stop area relations */
+            foreach.nodes(
+            rel(bn:"platform")["public_transport"="stop_area"];
+            out body;
+            );
+WARNING:root:Warning: Potential stop is invalid and has been ignored.
+WARNING:root: Check tagging: https://osm.org/node/4436431589
+ERROR:root:Station member was not found in data
+ERROR:root: https://osm.org/relation/10028854
+ERROR:root: https://osm.org/node/4436431589
+WARNING:root:OSM stop area has only one platform and can't be used as a GTFS station:
+WARNING:root: https://osm.org/relation/10028854
+INFO:root:Stop area (OSM) has been used to create a station (GTFS):
+
+INFO:root: https://osm.org/relation/10028931
+
+INFO:root:* Found alternative stop name: Ismet Asllani - https://osm.org/node/6027181570
+INFO:root:Added stop: Dardania - https://osm.org/relation/10028931
+INFO:root:Added stop: Katedralja - https://osm.org/node/1458787638
+INFO:root:Added stop: Dardania - https://osm.org/node/4436381092
+INFO:root:Added stop: Lakrishtë - https://osm.org/node/4436391290
+INFO:root:Added stop: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+INFO:root:Added stop: Ismet Asllani - https://osm.org/node/6027181570
+INFO:root:Query and build fresh data for routes
+INFO:root:(
+            /* Obtain route variants based on tags and bounding box */
+            relation['route' = 'bus'](42.55210,21.00451,42.62066,21.13050)->.routes;
+
+            /*  Query for related route masters */
+            relation[type=route_master](br.routes)->.masters;
+
+            /* Query for routes' geometry (ways and it's nodes) */
+            way(r.routes);
+            node(w);
+
+            /* Select all result sets  */
+            ( .routes;.masters;._; );
+
+            /* Return tags for elements and roles for relation members. */
+            );out body;
+WARNING:root:Route has non-matching ways: https://osm.org/relation/10118966
+WARNING:root:  Problem at: https://osm.org/way/905370489
+WARNING:root:Route has non-matching ways: https://osm.org/relation/10118965
+WARNING:root:  Problem at: https://osm.org/way/499728065
+WARNING:root:Route (variant) without route_master
+WARNING:root: https://osm.org/relation/10219969
+WARNING:root: Please fix in OpenStreetMap
+WARNING:root:RouteVariant without 'ref': 10219969
+WARNING:root:Route has non-matching ways: https://osm.org/relation/10219969
+WARNING:root:  Problem at: https://osm.org/way/678194217
+WARNING:root:Relation without 'ref'. Please fix in OpenStreetMap
+WARNING:root: https://osm.org/relation/10219969
+WARNING:root:Route master relation without a route_master tag: https://osm.org/relation/10219969
+WARNING:root:Route (variant) without route_master
+WARNING:root: https://osm.org/relation/10219970
+WARNING:root: Please fix in OpenStreetMap
+WARNING:root:RouteVariant without 'ref': 10219970
+WARNING:root:Route has non-matching ways: https://osm.org/relation/10219970
+WARNING:root:  Problem at: https://osm.org/way/405288259
+WARNING:root:Route with existing route_id (ref)
+WARNING:root: https://osm.org/relation/10219970
+WARNING:root: Skipped. Please fix in OpenStreetMap
+INFO:root:Load schedule source information from ../../results/frequency2timetable/prishtina/timetable.json
+INFO:root:
+Generating schedule for line: [] - Prizren - Prishtina bus station
+WARNING:root:Route not found in schedule.
+INFO:root: Itinerary: [ None] (added 0 trips, serving 0 stops) - https://osm.org/relation/10219969
+INFO:root:
+Generating schedule for line: [1A] - Trafiku Urban 1A Aeroporti Ndërkombëtar i Prishtinës - Prishtina Bus station
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Lakrishtë - https://osm.org/node/4436391290
+INFO:root: Itinerary: [1A Stacioni i Autobusëve në Prishtinë] (added 78 trips, serving 3 stops) - https://osm.org/relation/10118966
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+WARNING:root:Could not add first stop to trip without time information.
+WARNING:root: Dardania "Ibër Lepenci" - https://osm.org/node/4436431590
+INFO:root: Itinerary: [1A Prishtina International Airport] (added 78 trips, serving 2 stops) - https://osm.org/relation/10118965
+INFO:root:
+Total of added trips to this GTFS: 156
+
+
+INFO:root:Removed 5 unused stops
+INFO:root:Removed 1 unused route
+All services are defined on a weekly basis from 2023-12-01 to 2024-11-30 with
+no single day variations. If there are exceptions such as holiday service
+dates please ensure they are listed in calendar_dates.txt
+ column route_color
+Invalid value FFFFF in field route_color
+route_color should be a valid color description which consists of 6
+hexadecimal characters representing the RGB values. Example: 44AA06
+The trip with the trip_id "0" doesn't have any stop times defined.
+The trip with the trip_id "1" doesn't have any stop times defined.
+The trip with the trip_id "2" doesn't have any stop times defined.
+The trip with the trip_id "3" doesn't have any stop times defined.
+The trip with the trip_id "4" doesn't have any stop times defined.
+The trip with the trip_id "5" doesn't have any stop times defined.
+The trip with the trip_id "6" doesn't have any stop times defined.
+The trip with the trip_id "7" doesn't have any stop times defined.
+The trip with the trip_id "8" doesn't have any stop times defined.
+The trip with the trip_id "9" doesn't have any stop times defined.
+The trip with the trip_id "10" doesn't have any stop times defined.
+The trip with the trip_id "11" doesn't have any stop times defined.
+The trip with the trip_id "12" doesn't have any stop times defined.
+The trip with the trip_id "13" doesn't have any stop times defined.
+The trip with the trip_id "14" doesn't have any stop times defined.
+The trip with the trip_id "15" doesn't have any stop times defined.
+The trip with the trip_id "16" doesn't have any stop times defined.
+The trip with the trip_id "17" doesn't have any stop times defined.
+The trip with the trip_id "18" doesn't have any stop times defined.
+The trip with the trip_id "19" doesn't have any stop times defined.
+The trip with the trip_id "20" doesn't have any stop times defined.
+The trip with the trip_id "21" doesn't have any stop times defined.
+The trip with the trip_id "22" doesn't have any stop times defined.
+The trip with the trip_id "23" doesn't have any stop times defined.
+The trip with the trip_id "24" doesn't have any stop times defined.
+The trip with the trip_id "25" doesn't have any stop times defined.
+The trip with the trip_id "26" doesn't have any stop times defined.
+The trip with the trip_id "27" doesn't have any stop times defined.
+The trip with the trip_id "28" doesn't have any stop times defined.
+The trip with the trip_id "29" doesn't have any stop times defined.
+The trip with the trip_id "30" doesn't have any stop times defined.
+The trip with the trip_id "31" doesn't have any stop times defined.
+The trip with the trip_id "32" doesn't have any stop times defined.
+The trip with the trip_id "33" doesn't have any stop times defined.
+The trip with the trip_id "34" doesn't have any stop times defined.
+The trip with the trip_id "35" doesn't have any stop times defined.
+The trip with the trip_id "36" doesn't have any stop times defined.
+The trip with the trip_id "37" doesn't have any stop times defined.
+The trip with the trip_id "38" doesn't have any stop times defined.
+The trip with the trip_id "39" doesn't have any stop times defined.
+The trip with the trip_id "40" doesn't have any stop times defined.
+The trip with the trip_id "41" doesn't have any stop times defined.
+The trip with the trip_id "42" doesn't have any stop times defined.
+The trip with the trip_id "43" doesn't have any stop times defined.
+The trip with the trip_id "44" doesn't have any stop times defined.
+The trip with the trip_id "45" doesn't have any stop times defined.
+The trip with the trip_id "46" doesn't have any stop times defined.
+The trip with the trip_id "47" doesn't have any stop times defined.
+The trip with the trip_id "48" doesn't have any stop times defined.
+The trip with the trip_id "49" doesn't have any stop times defined.
+The trip with the trip_id "50" doesn't have any stop times defined.
+The trip with the trip_id "51" doesn't have any stop times defined.
+The trip with the trip_id "52" doesn't have any stop times defined.
+The trip with the trip_id "53" doesn't have any stop times defined.
+The trip with the trip_id "54" doesn't have any stop times defined.
+The trip with the trip_id "55" doesn't have any stop times defined.
+The trip with the trip_id "56" doesn't have any stop times defined.
+The trip with the trip_id "57" doesn't have any stop times defined.
+The trip with the trip_id "58" doesn't have any stop times defined.
+The trip with the trip_id "59" doesn't have any stop times defined.
+The trip with the trip_id "60" doesn't have any stop times defined.
+The trip with the trip_id "61" doesn't have any stop times defined.
+The trip with the trip_id "62" doesn't have any stop times defined.
+The trip with the trip_id "63" doesn't have any stop times defined.
+The trip with the trip_id "64" doesn't have any stop times defined.
+The trip with the trip_id "65" doesn't have any stop times defined.
+The trip with the trip_id "66" doesn't have any stop times defined.
+The trip with the trip_id "67" doesn't have any stop times defined.
+The trip with the trip_id "68" doesn't have any stop times defined.
+The trip with the trip_id "69" doesn't have any stop times defined.
+The trip with the trip_id "70" doesn't have any stop times defined.
+The trip with the trip_id "71" doesn't have any stop times defined.
+The trip with the trip_id "72" doesn't have any stop times defined.
+The trip with the trip_id "73" doesn't have any stop times defined.
+The trip with the trip_id "74" doesn't have any stop times defined.
+The trip with the trip_id "75" doesn't have any stop times defined.
+The trip with the trip_id "76" doesn't have any stop times defined.
+The trip with the trip_id "77" doesn't have any stop times defined.
+The trip with the trip_id "78" doesn't have any stop times defined.
+The trip with the trip_id "79" doesn't have any stop times defined.
+The trip with the trip_id "80" doesn't have any stop times defined.
+The trip with the trip_id "81" doesn't have any stop times defined.
+The trip with the trip_id "82" doesn't have any stop times defined.
+The trip with the trip_id "83" doesn't have any stop times defined.
+The trip with the trip_id "84" doesn't have any stop times defined.
+The trip with the trip_id "85" doesn't have any stop times defined.
+The trip with the trip_id "86" doesn't have any stop times defined.
+The trip with the trip_id "87" doesn't have any stop times defined.
+The trip with the trip_id "88" doesn't have any stop times defined.
+The trip with the trip_id "89" doesn't have any stop times defined.
+The trip with the trip_id "90" doesn't have any stop times defined.
+The trip with the trip_id "91" doesn't have any stop times defined.
+The trip with the trip_id "92" doesn't have any stop times defined.
+The trip with the trip_id "93" doesn't have any stop times defined.
+The trip with the trip_id "94" doesn't have any stop times defined.
+The trip with the trip_id "95" doesn't have any stop times defined.
+The trip with the trip_id "96" doesn't have any stop times defined.
+The trip with the trip_id "97" doesn't have any stop times defined.
+The trip with the trip_id "98" doesn't have any stop times defined.
+The trip with the trip_id "99" doesn't have any stop times defined.
+The trip with the trip_id "100" doesn't have any stop times defined.
+The trip with the trip_id "101" doesn't have any stop times defined.
+The trip with the trip_id "102" doesn't have any stop times defined.
+The trip with the trip_id "103" doesn't have any stop times defined.
+The trip with the trip_id "104" doesn't have any stop times defined.
+The trip with the trip_id "105" doesn't have any stop times defined.
+The trip with the trip_id "106" doesn't have any stop times defined.
+The trip with the trip_id "107" doesn't have any stop times defined.
+The trip with the trip_id "108" doesn't have any stop times defined.
+The trip with the trip_id "109" doesn't have any stop times defined.
+The trip with the trip_id "110" doesn't have any stop times defined.
+The trip with the trip_id "111" doesn't have any stop times defined.
+The trip with the trip_id "112" doesn't have any stop times defined.
+The trip with the trip_id "113" doesn't have any stop times defined.
+The trip with the trip_id "114" doesn't have any stop times defined.
+The trip with the trip_id "115" doesn't have any stop times defined.
+The trip with the trip_id "116" doesn't have any stop times defined.
+The trip with the trip_id "117" doesn't have any stop times defined.
+The trip with the trip_id "118" doesn't have any stop times defined.
+The trip with the trip_id "119" doesn't have any stop times defined.
+The trip with the trip_id "120" doesn't have any stop times defined.
+The trip with the trip_id "121" doesn't have any stop times defined.
+The trip with the trip_id "122" doesn't have any stop times defined.
+The trip with the trip_id "123" doesn't have any stop times defined.
+The trip with the trip_id "124" doesn't have any stop times defined.
+The trip with the trip_id "125" doesn't have any stop times defined.
+The trip with the trip_id "126" doesn't have any stop times defined.
+The trip with the trip_id "127" doesn't have any stop times defined.
+The trip with the trip_id "128" doesn't have any stop times defined.
+The trip with the trip_id "129" doesn't have any stop times defined.
+The trip with the trip_id "130" doesn't have any stop times defined.
+The trip with the trip_id "131" doesn't have any stop times defined.
+The trip with the trip_id "132" doesn't have any stop times defined.
+The trip with the trip_id "133" doesn't have any stop times defined.
+The trip with the trip_id "134" doesn't have any stop times defined.
+The trip with the trip_id "135" doesn't have any stop times defined.
+The trip with the trip_id "136" doesn't have any stop times defined.
+The trip with the trip_id "137" doesn't have any stop times defined.
+The trip with the trip_id "138" doesn't have any stop times defined.
+The trip with the trip_id "139" doesn't have any stop times defined.
+The trip with the trip_id "140" doesn't have any stop times defined.
+The trip with the trip_id "141" doesn't have any stop times defined.
+The trip with the trip_id "142" doesn't have any stop times defined.
+The trip with the trip_id "143" doesn't have any stop times defined.
+The trip with the trip_id "144" doesn't have any stop times defined.
+The trip with the trip_id "145" doesn't have any stop times defined.
+The trip with the trip_id "146" doesn't have any stop times defined.
+The trip with the trip_id "147" doesn't have any stop times defined.
+The trip with the trip_id "148" doesn't have any stop times defined.
+The trip with the trip_id "149" doesn't have any stop times defined.
+The trip with the trip_id "150" doesn't have any stop times defined.
+The trip with the trip_id "151" doesn't have any stop times defined.
+The trip with the trip_id "152" doesn't have any stop times defined.
+The trip with the trip_id "153" doesn't have any stop times defined.
+The trip with the trip_id "154" doesn't have any stop times defined.
+The trip with the trip_id "155" doesn't have any stop times defined.
+The shapes with the following shape_ids aren't used by any trips:
+relation/10118965, relation/10118966

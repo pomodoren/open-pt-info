@@ -498,7 +498,7 @@
                     "TEG (Tirana East Gate)",
                     "Sauk i Vjetër",
                     "Kopshti Zoologjik",
-                    "Barrikada"
+                    "Barrikadat"
                 ],
                 "times": [
                     [
@@ -970,7 +970,7 @@
                         "20:00"
                     ]
                 ],
-                "to": "Barrikada",
+                "to": "Barrikadat",
                 "via": "Sauk i Vjetër;Kopshti Zoologjik"
             }
         ]
