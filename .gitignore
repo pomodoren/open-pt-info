@@ -1,4 +1,5 @@
-tools/
+tools/*
+!tools/data/*
 venv/
 
 # Byte-compiled / optimized / DLL files
