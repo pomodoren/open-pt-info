@@ -58,8 +58,9 @@
 <img src="../../docs/durres-transport.png" alt="drawing" width="400"/>
 
 
-### Network
+### Info
 
+- https://durres.gov.al/e-drejta-e-informimit/
 - https://faktoje.al/20442-2/
 - https://portavendore.al/wp-content/uploads/2018/04/Monitorim-Llogaridh%C3%ABnie-Q%C3%ABndra-Konsumatori-Shqiptar-Bashkia-Durr%C3%ABs-Monitorim-i-transportit-publik-2017-1.pdf
 - https://visitdurres.al/harta-e-transportit-publik/

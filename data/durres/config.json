@@ -1,0 +1,34 @@
+{
+    "query": {
+        "bbox": {
+            "n": "41.4213",
+            "s": "41.2256",
+            "e": "19.5871",
+            "w": "19.3781"
+        },
+        "tags": {
+            "route": "bus"
+        }
+    },
+    "stops": {
+        "name_without": "Stop w/ no name",
+        "name_auto": "yes"
+    },
+    "agency": {
+        "agency_id": "AL-Durres",
+        "agency_name": "Durres Public Transport",
+        "agency_url": "https://visitdurres.al/",
+        "agency_timezone": "Europe/Tirane",
+        "agency_lang": "sq",
+        "agency_phone": "+355 (0) 42 223 334",
+        "agency_fare_url": "https://visitdurres.al/"
+    },
+    "feed_info": {
+        "publisher_name": "Municipality",
+        "publisher_url": "https://visitdurres.al/",
+        "version":  "1.0"
+    },
+    "schedule_source": "data/durres/timetable.json",
+    "output_file": "results/durres_gtfs.zip",
+    "selector": "al_durres"
+}

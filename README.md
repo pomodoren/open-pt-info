@@ -29,11 +29,11 @@ cd tools
 
 ```sh
 git clone https://github.com/mapanica/easy-timetable-generator 
-cd easy-timetable-generator
+# cd easy-timetable-generator
 # cp data/example .
 
 # creating schedules
-python3 easy-timetable-generator/convert.py -f tirana
+python3 tools/easy-timetable-generator/convert.py -f tirana
 cp -r data/* ../results/frequency2timetable/
 ```
 
@@ -61,7 +61,7 @@ osm2gtfs -c results/tirana/config.json > results/osm-issues/logging.tirana.txt 2
     - From and To is same to From and To that you have defined in the frequencies table
     - Via is defined (in case no error comes up - might be related to this) 
 - Make sure you have cleaned up after error in osm2gtfs
-    - the data is cached under data/ - `cd tools/osm2gtfs; rm -rf data`
+    - the data is cached under data/ - `rm -rf data/al_*`
 -  python3 unpickling.py - for debugging routes
 
 
