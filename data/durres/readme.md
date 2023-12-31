@@ -58,6 +58,10 @@
 <img src="../../docs/durres-transport.png" alt="drawing" width="400"/>
 
 
+
+<img src="../../docs/dr-download.png" alt="drawing" width="300"/>
+<img src="../../docs/dr-download-culture.png" alt="drawing" width="400"/>
+
 ### Info
 
 - https://durres.gov.al/e-drejta-e-informimit/

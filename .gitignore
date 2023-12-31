@@ -1,6 +1,7 @@
 tools/*
 !tools/data/*
 venv/
+data/tirana.standard
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
