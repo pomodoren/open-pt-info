@@ -1,5 +1,539 @@
-<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><link rel="stylesheet" href="../css/timetable_styles.css"><meta name="viewport" content="initial-scale=1.0, width=device-width"><script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script><script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script><script>mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlbmRhbm5lZSIsImEiOiJjaXRkMWIzbzEwMDV5MnRvMzJwbjRiaWc3In0.smzRW-NB_BCAGAQiEOvJdg';</script><script src="../js/timetable-map.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet"></head><body><!-- Timetable generated on Thu Dec 14 2023 09:54:00 GMT+0000 (Coordinated Universal Time) using GTFS-to-HTML version 2.5.1 --><div class="timetable-page menu-type-jump"><div class="container mx-4 md:mx-auto"><h1 class="timetable-page-label text-2xl pt-4 flex items-center"><div class="route-color-swatch-large mr-2 flex-none" style="background-color: #null; color: #000000">1A</div><div>Route 1A</div></h1><div class="timetable mb-10" id="timetable_id_1A1111110" data-day-list="Mon-Sat" data-direction-name="Aeroporti Ndërkombëtar i Prishtinës" data-timetable-id="1A|1111110" data-route-id="1A"><h2 class="text-xl">Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë | Monday-Saturday</h2><div class="map" id="map_timetable_id_1A1111110"></div><script>(function() {
-  const { id, geojson, routes } = {"id":"timetable_id_1A1111110","routes":{"1A":{"route_id":"1A","agency_id":"KS-Prishtina","route_short_name":"1A","route_long_name":"Trafiku Urban 1A Aeroporti Ndërkombëtar i Prishtinës - Prishtina Bus station","route_type":3,"route_url":"https://osm.org/relation/10118967","route_text_color":"#000000"}},"geojson":{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[21.02905,42.57435],[21.02897,42.57518],[21.02877,42.57543],[21.02867,42.57675],[21.02865,42.57682],[21.02854,42.57692],[21.02845,42.57696],[21.02836,42.57698],[21.0278,42.57696],[21.02758,42.577],[21.02747,42.57705],[21.02736,42.57713],[21.0272,42.57731],[21.02715,42.57784],[21.02716,42.57813],[21.02712,42.57823],[21.0271,42.57832],[21.02689,42.58047],[21.02695,42.58086],[21.02703,42.58118],[21.02702,42.58125],[21.02697,42.58133],[21.02693,42.58142],[21.02693,42.58161],[21.02714,42.58308],[21.02725,42.58336],[21.02725,42.58345],[21.02733,42.5837],[21.02736,42.58385],[21.02735,42.584],[21.02739,42.58441],[21.02739,42.5847],[21.02717,42.58721],[21.02655,42.5935],[21.02657,42.59424],[21.02671,42.59501],[21.02715,42.5964],[21.02779,42.5986],[21.02819,42.59975],[21.0284,42.59999],[21.02849,42.60006]]}},{"type":"Feature","properties":{"stop_id":"node/1458787638","stop_name":"Katedralja","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.15995,42.65715]}},{"type":"Feature","properties":{"stop_id":"node/3502701121","stop_name":"Rrethi Fushë Kosovë","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.0939,42.63765]}},{"type":"Feature","properties":{"stop_id":"node/4436381092","stop_name":"Dardania","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.15383,42.65464]}},{"type":"Feature","properties":{"stop_id":"node/4436391290","stop_name":"Lakrishtë","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.15072,42.65363]}},{"type":"Feature","properties":{"stop_id":"node/4995104208","stop_name":"Aeroporti Ndërkombëtar i Prishtinës","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.02893,42.57427]}},{"type":"Feature","properties":{"stop_id":"node/6854988641","stop_name":"Sllatinë (mbi rrethrrotullim)","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.02858,42.59998]}},{"type":"Feature","properties":{"stop_id":"node/6854988644","stop_name":"Stacioni i Autobusëve në Prishtinë","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.14794,42.65079]}},{"type":"Feature","properties":{"stop_id":"node/6854988647","stop_name":"Sh. M. L. Ekonomike","location_type":0,"routes":["1A"],"agency_name":"Trafiku Urban PR"},"geometry":{"type":"Point","coordinates":[21.14097,42.65073]}}]}};
-  createMap(id, geojson, routes);
-})();
-</script><div class="table-container"><table summary="This table shows schedules for a selection of key stops on the route for Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë Mon-Sat. Stops and their schedule times are listed in the columns." data-orientation="vertical"><caption class="sr-only">Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë | Mon-Sat</caption><colgroup><col class="stop-0" id="stop_id_node4995104208" data-stop-id="node/4995104208"><col class="stop-1" id="stop_id_node6854988641" data-stop-id="node/6854988641"><col class="stop-2" id="stop_id_node3502701121" data-stop-id="node/3502701121"><col class="stop-3" id="stop_id_node6854988647" data-stop-id="node/6854988647"><col class="stop-4" id="stop_id_node4436391290" data-stop-id="node/4436391290"><col class="stop-5" id="stop_id_node4436381092" data-stop-id="node/4436381092"><col class="stop-6" id="stop_id_node1458787638" data-stop-id="node/1458787638"><col class="stop-7" id="stop_id_node6854988644" data-stop-id="node/6854988644"></colgroup><thead><tr><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Aeroporti Ndërkombëtar i Prishtinës</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Sllatinë (mbi rrethrrotullim)</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Rrethi Fushë Kosovë</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Sh. M. L. Ekonomike</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Lakrishtë</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Dardania</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Katedralja</div><div class="stop-code"></div></th><th class="stop-header" scope="col" width="12.50%"><div class="stop-name">Stacioni i Autobusëve në Prishtinë</div><div class="stop-code"></div></th></tr></thead><tbody><tr class="trip-row" id="trip_id_0"><td class="stop-time am"><span class="stop-time-text">5:40am</span></td><td class="stop-time am"><span class="stop-time-text">5:50am</span></td><td class="stop-time am"><span class="stop-time-text">6:00am</span></td><td class="stop-time am"><span class="stop-time-text">6:14am</span></td><td class="stop-time am"><span class="stop-time-text">6:17am</span></td><td class="stop-time am"><span class="stop-time-text">6:18am</span></td><td class="stop-time am"><span class="stop-time-text">6:20am</span></td><td class="stop-time am"><span class="stop-time-text">6:25am</span></td></tr><tr class="trip-row" id="trip_id_1"><td class="stop-time am"><span class="stop-time-text">6:10am</span></td><td class="stop-time am"><span class="stop-time-text">6:20am</span></td><td class="stop-time am"><span class="stop-time-text">6:30am</span></td><td class="stop-time am"><span class="stop-time-text">6:44am</span></td><td class="stop-time am"><span class="stop-time-text">6:47am</span></td><td class="stop-time am"><span class="stop-time-text">6:48am</span></td><td class="stop-time am"><span class="stop-time-text">6:50am</span></td><td class="stop-time am"><span class="stop-time-text">6:55am</span></td></tr><tr class="trip-row" id="trip_id_2"><td class="stop-time am"><span class="stop-time-text">6:40am</span></td><td class="stop-time am"><span class="stop-time-text">6:50am</span></td><td class="stop-time am"><span class="stop-time-text">7:00am</span></td><td class="stop-time am"><span class="stop-time-text">7:14am</span></td><td class="stop-time am"><span class="stop-time-text">7:17am</span></td><td class="stop-time am"><span class="stop-time-text">7:18am</span></td><td class="stop-time am"><span class="stop-time-text">7:20am</span></td><td class="stop-time am"><span class="stop-time-text">7:25am</span></td></tr><tr class="trip-row" id="trip_id_3"><td class="stop-time am"><span class="stop-time-text">7:10am</span></td><td class="stop-time am"><span class="stop-time-text">7:20am</span></td><td class="stop-time am"><span class="stop-time-text">7:30am</span></td><td class="stop-time am"><span class="stop-time-text">7:44am</span></td><td class="stop-time am"><span class="stop-time-text">7:47am</span></td><td class="stop-time am"><span class="stop-time-text">7:48am</span></td><td class="stop-time am"><span class="stop-time-text">7:50am</span></td><td class="stop-time am"><span class="stop-time-text">7:55am</span></td></tr><tr class="trip-row" id="trip_id_4"><td class="stop-time am"><span class="stop-time-text">7:40am</span></td><td class="stop-time am"><span class="stop-time-text">7:50am</span></td><td class="stop-time am"><span class="stop-time-text">8:00am</span></td><td class="stop-time am"><span class="stop-time-text">8:14am</span></td><td class="stop-time am"><span class="stop-time-text">8:17am</span></td><td class="stop-time am"><span class="stop-time-text">8:18am</span></td><td class="stop-time am"><span class="stop-time-text">8:20am</span></td><td class="stop-time am"><span class="stop-time-text">8:25am</span></td></tr><tr class="trip-row" id="trip_id_5"><td class="stop-time am"><span class="stop-time-text">8:10am</span></td><td class="stop-time am"><span class="stop-time-text">8:20am</span></td><td class="stop-time am"><span class="stop-time-text">8:30am</span></td><td class="stop-time am"><span class="stop-time-text">8:44am</span></td><td class="stop-time am"><span class="stop-time-text">8:47am</span></td><td class="stop-time am"><span class="stop-time-text">8:48am</span></td><td class="stop-time am"><span class="stop-time-text">8:50am</span></td><td class="stop-time am"><span class="stop-time-text">8:55am</span></td></tr><tr class="trip-row" id="trip_id_6"><td class="stop-time am"><span class="stop-time-text">8:40am</span></td><td class="stop-time am"><span class="stop-time-text">8:50am</span></td><td class="stop-time am"><span class="stop-time-text">9:00am</span></td><td class="stop-time am"><span class="stop-time-text">9:14am</span></td><td class="stop-time am"><span class="stop-time-text">9:17am</span></td><td class="stop-time am"><span class="stop-time-text">9:18am</span></td><td class="stop-time am"><span class="stop-time-text">9:20am</span></td><td class="stop-time am"><span class="stop-time-text">9:25am</span></td></tr><tr class="trip-row" id="trip_id_7"><td class="stop-time am"><span class="stop-time-text">9:10am</span></td><td class="stop-time am"><span class="stop-time-text">9:20am</span></td><td class="stop-time am"><span class="stop-time-text">9:30am</span></td><td class="stop-time am"><span class="stop-time-text">9:44am</span></td><td class="stop-time am"><span class="stop-time-text">9:47am</span></td><td class="stop-time am"><span class="stop-time-text">9:48am</span></td><td class="stop-time am"><span class="stop-time-text">9:50am</span></td><td class="stop-time am"><span class="stop-time-text">9:55am</span></td></tr><tr class="trip-row" id="trip_id_8"><td class="stop-time am"><span class="stop-time-text">9:40am</span></td><td class="stop-time am"><span class="stop-time-text">9:50am</span></td><td class="stop-time am"><span class="stop-time-text">10:00am</span></td><td class="stop-time am"><span class="stop-time-text">10:14am</span></td><td class="stop-time am"><span class="stop-time-text">10:17am</span></td><td class="stop-time am"><span class="stop-time-text">10:18am</span></td><td class="stop-time am"><span class="stop-time-text">10:20am</span></td><td class="stop-time am"><span class="stop-time-text">10:25am</span></td></tr><tr class="trip-row" id="trip_id_9"><td class="stop-time am"><span class="stop-time-text">10:10am</span></td><td class="stop-time am"><span class="stop-time-text">10:20am</span></td><td class="stop-time am"><span class="stop-time-text">10:30am</span></td><td class="stop-time am"><span class="stop-time-text">10:44am</span></td><td class="stop-time am"><span class="stop-time-text">10:47am</span></td><td class="stop-time am"><span class="stop-time-text">10:48am</span></td><td class="stop-time am"><span class="stop-time-text">10:50am</span></td><td class="stop-time am"><span class="stop-time-text">10:55am</span></td></tr><tr class="trip-row" id="trip_id_10"><td class="stop-time am"><span class="stop-time-text">10:40am</span></td><td class="stop-time am"><span class="stop-time-text">10:50am</span></td><td class="stop-time am"><span class="stop-time-text">11:00am</span></td><td class="stop-time am"><span class="stop-time-text">11:14am</span></td><td class="stop-time am"><span class="stop-time-text">11:17am</span></td><td class="stop-time am"><span class="stop-time-text">11:18am</span></td><td class="stop-time am"><span class="stop-time-text">11:20am</span></td><td class="stop-time am"><span class="stop-time-text">11:25am</span></td></tr><tr class="trip-row" id="trip_id_11"><td class="stop-time am"><span class="stop-time-text">11:10am</span></td><td class="stop-time am"><span class="stop-time-text">11:20am</span></td><td class="stop-time am"><span class="stop-time-text">11:30am</span></td><td class="stop-time am"><span class="stop-time-text">11:44am</span></td><td class="stop-time am"><span class="stop-time-text">11:47am</span></td><td class="stop-time am"><span class="stop-time-text">11:48am</span></td><td class="stop-time am"><span class="stop-time-text">11:50am</span></td><td class="stop-time am"><span class="stop-time-text">11:55am</span></td></tr><tr class="trip-row" id="trip_id_12"><td class="stop-time am"><span class="stop-time-text">11:40am</span></td><td class="stop-time am"><span class="stop-time-text">11:50am</span></td><td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td></tr><tr class="trip-row" id="trip_id_13"><td class="stop-time pm"><span class="stop-time-text">12:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td></tr><tr class="trip-row" id="trip_id_14"><td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:25pm</span></td></tr><tr class="trip-row" id="trip_id_15"><td class="stop-time pm"><span class="stop-time-text">1:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:55pm</span></td></tr><tr class="trip-row" id="trip_id_16"><td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">1:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td></tr><tr class="trip-row" id="trip_id_17"><td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:55pm</span></td></tr><tr class="trip-row" id="trip_id_18"><td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td></tr><tr class="trip-row" id="trip_id_19"><td class="stop-time pm"><span class="stop-time-text">3:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td></tr><tr class="trip-row" id="trip_id_20"><td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td></tr><tr class="trip-row" id="trip_id_21"><td class="stop-time pm"><span class="stop-time-text">4:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:55pm</span></td></tr><tr class="trip-row" id="trip_id_22"><td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:25pm</span></td></tr><tr class="trip-row" id="trip_id_23"><td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td></tr><tr class="trip-row" id="trip_id_24"><td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td><td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:17pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td></tr><tr class="trip-row" id="trip_id_25"><td class="stop-time pm"><span class="stop-time-text">6:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:44pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:47pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:48pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">6:55pm</span></td></tr><tr class="trip-row" id="trip_id_26"><td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:27pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:28pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:30pm</span></td><td class="stop-time pm"><span class="stop-time-text">7:35pm</span></td></tr></tbody></table></div><div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicG9tb2RvcmVuIiwiYSI6ImNscXNxbHgzNjRkbnoycXJxODB6b2F2ZTYifQ.yepzIdraeKMJ0QeCPKoWAA';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body><!-- Timetable generated on Mon Jan 01 2024 13:43:12 GMT+0100 (Central European Standard Time) using GTFS-to-HTML version 2.5.7 -->
+  <div class="timetable-page menu-type-simple">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #null; color: #000000">1A</div>
+        <div>Route 1A</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective July 8, 2016</div>
+      <div class="timetable mb-10" id="timetable_id_1A1111110" data-day-list="Mon-Sat" data-direction-name="Aeroporti Ndërkombëtar i Prishtinës" data-timetable-id="1A|1111110" data-route-id="1A">
+        <h2 class="text-xl">Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë | monday-saturday</h2>
+        <div class="map" id="map_timetable_id_1A1111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1A1111110",
+              "routes": {
+                "1A": {
+                  "route_id": "1A",
+                  "agency_id": "KS-Prishtina",
+                  "route_short_name": "1A",
+                  "route_long_name": "Trafiku Urban 1A Aeroporti Ndërkombëtar i Prishtinës - Prishtina Bus station",
+                  "route_type": 3,
+                  "route_url": "https://osm.org/relation/10118967",
+                  "route_text_color": "#000000"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [21.02905, 42.57435],
+                      [21.02897, 42.57518],
+                      [21.02877, 42.57543],
+                      [21.02867, 42.57675],
+                      [21.02865, 42.57682],
+                      [21.02854, 42.57692],
+                      [21.02845, 42.57696],
+                      [21.02836, 42.57698],
+                      [21.0278, 42.57696],
+                      [21.02758, 42.577],
+                      [21.02747, 42.57705],
+                      [21.02736, 42.57713],
+                      [21.0272, 42.57731],
+                      [21.02715, 42.57784],
+                      [21.02716, 42.57813],
+                      [21.02712, 42.57823],
+                      [21.0271, 42.57832],
+                      [21.02689, 42.58047],
+                      [21.02695, 42.58086],
+                      [21.02703, 42.58118],
+                      [21.02702, 42.58125],
+                      [21.02697, 42.58133],
+                      [21.02693, 42.58142],
+                      [21.02693, 42.58161],
+                      [21.02714, 42.58308],
+                      [21.02725, 42.58336],
+                      [21.02725, 42.58345],
+                      [21.02733, 42.5837],
+                      [21.02736, 42.58385],
+                      [21.02735, 42.584],
+                      [21.02739, 42.58441],
+                      [21.02739, 42.5847],
+                      [21.02717, 42.58721],
+                      [21.02655, 42.5935],
+                      [21.02657, 42.59424],
+                      [21.02671, 42.59501],
+                      [21.02715, 42.5964],
+                      [21.02779, 42.5986],
+                      [21.02819, 42.59975],
+                      [21.0284, 42.59999],
+                      [21.02849, 42.60006]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/1458787638",
+                    "stop_name": "Katedralja",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.15995, 42.65715]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/3502701121",
+                    "stop_name": "Rrethi Fushë Kosovë",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.0939, 42.63765]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/4436381092",
+                    "stop_name": "Dardania",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.15383, 42.65464]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/4436391290",
+                    "stop_name": "Lakrishtë",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.15072, 42.65363]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/4995104208",
+                    "stop_name": "Aeroporti Ndërkombëtar i Prishtinës",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.02893, 42.57427]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/6854988641",
+                    "stop_name": "Sllatinë (mbi rrethrrotullim)",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.02858, 42.59998]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/6854988644",
+                    "stop_name": "Stacioni i Autobusëve në Prishtinë",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.14794, 42.65079]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/6854988647",
+                    "stop_name": "Sh. M. L. Ekonomike",
+                    "location_type": 0,
+                    "routes": ["1A"],
+                    "agency_name": "Trafiku Urban PR"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [21.14097, 42.65073]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table summary="This table shows schedules for a selection of key stops on the route for Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë Mon-Sat. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 1A - Aeroporti Ndërkombëtar i Prishtinës to Stacioni i Autobusëve në Prishtinë | Mon-Sat</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_node4995104208" data-stop-id="node/4995104208" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_node6854988641" data-stop-id="node/6854988641" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_node3502701121" data-stop-id="node/3502701121" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_node6854988647" data-stop-id="node/6854988647" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_node4436391290" data-stop-id="node/4436391290" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_node4436381092" data-stop-id="node/4436381092" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_node1458787638" data-stop-id="node/1458787638" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_node6854988644" data-stop-id="node/6854988644" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Aeroporti Ndërkombëtar i Prishtinës</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Sllatinë (mbi rrethrrotullim)</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Rrethi Fushë Kosovë</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Sh. M. L. Ekonomike</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Lakrishtë</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Dardania</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Katedralja</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Stacioni i Autobusëve në Prishtinë</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_0">
+                <td class="stop-time am"><span class="stop-time-text">5:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">5:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1">
+                <td class="stop-time am"><span class="stop-time-text">6:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2">
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_3">
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4">
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_5">
+                <td class="stop-time am"><span class="stop-time-text">8:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6">
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_7">
+                <td class="stop-time am"><span class="stop-time-text">9:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_8">
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_9">
+                <td class="stop-time am"><span class="stop-time-text">10:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_10">
+                <td class="stop-time am"><span class="stop-time-text">10:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_11">
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_12">
+                <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_13">
+                <td class="stop-time pm"><span class="stop-time-text">12:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_14">
+                <td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_15">
+                <td class="stop-time pm"><span class="stop-time-text">1:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_16">
+                <td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_17">
+                <td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_18">
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_19">
+                <td class="stop-time pm"><span class="stop-time-text">3:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_20">
+                <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_21">
+                <td class="stop-time pm"><span class="stop-time-text">4:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_22">
+                <td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_23">
+                <td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_24">
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_25">
+                <td class="stop-time pm"><span class="stop-time-text">6:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_26">
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:35pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

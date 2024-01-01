@@ -1,10 +1,10 @@
 Feed Version: 1.0
-GTFS-to-HTML Version: 2.5.1
-Date Generated: Thu Dec 14 2023 09:53:27 GMT+0000 (Coordinated Universal Time)
+GTFS-to-HTML Version: 2.5.7
+Date Generated: Mon Jan 01 2024 13:41:13 GMT+0100 (Central European Standard Time)
 Timetable Page Count: 1
 Timetable Count: 1
 Calendar Service ID Count: 1
 Route Count: 1
 Trip Count: 28
 Stop Count: 23
-Source: /tmp/tmp-28574-G41ONDvS61Fh/95ce800d-688c-44c6-817b-bebf873374a3-gtfs.zip
+Source: ../../results/tirana_gtfs.zip

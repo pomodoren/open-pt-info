@@ -1,4 +1,645 @@
-<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><link rel="stylesheet" href="css/timetable_styles.css"><meta name="viewport" content="initial-scale=1.0, width=device-width"><script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script><script src="https://unpkg.com/lodash@4.17.21/lodash.min.js" crossorigin="anonymous"></script><script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script><script>mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlbmRhbm5lZSIsImEiOiJjaXRkMWIzbzEwMDV5MnRvMzJwbjRiaWc3In0.smzRW-NB_BCAGAQiEOvJdg';</script><script src="js/system-map.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet"></head><body><div class="container mx-4 h-screen items-stretch md:mx-auto md:flex"><div class="overview-list flex-none md:overflow-y-scroll"><h1 class="text-2xl pt-4 pb-2">Tirana Public Transport Routes</h1><a class="block p-2 border-b border-slate-200 hover:bg-slate-200 hover:no-underline" href="20231201-20241130/l21111110_l2_mon-sat.html" data-route-ids="L2"><div class="text-lg text-gray-800 leading-none">Route L2</div><div class="flex my-1"><div class="route-color-swatch flex-none mr-2" style="background-color: #f06ebd; color: #000000;">L2</div><div class="mt-1 text-gray-600 leading-none">Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit</div></div><div class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-slate-800 bg-slate-200 rounded-full">Mon-Sat</div></a></div><div class="map ml-4 h-full w-full" id="system_map"></div><script>(function() {
-  var geojson = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"agency_name":"Tirana Public Transport","route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"},"geometry":{"type":"LineString","coordinates":[[19.85847,41.28297],[19.85731,41.28194],[19.85692,41.28162],[19.85684,41.28157],[19.85659,41.28149],[19.85646,41.28146],[19.85624,41.28146],[19.85612,41.28148],[19.85591,41.28153],[19.85571,41.28163],[19.85563,41.2817],[19.85548,41.28186],[19.85526,41.28215],[19.85518,41.28233],[19.8552,41.28239],[19.85516,41.28246],[19.8551,41.2825],[19.855,41.2825],[19.85485,41.28254],[19.85411,41.28294],[19.85395,41.28306],[19.85393,41.28314],[19.85388,41.28322],[19.8538,41.2833],[19.85366,41.28337],[19.85355,41.28347],[19.85349,41.28355],[19.85237,41.28595],[19.85225,41.2861],[19.85164,41.28741],[19.85126,41.28815],[19.85035,41.28954],[19.85003,41.28996],[19.84925,41.2909],[19.84744,41.29273],[19.8429,41.29722],[19.84131,41.29871],[19.83962,41.30047],[19.83876,41.30141],[19.83796,41.30237],[19.83774,41.30258],[19.83737,41.30286],[19.83707,41.30304],[19.83669,41.30322],[19.83624,41.30337]]}},{"type":"Feature","properties":{"agency_name":"Tirana Public Transport","route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"},"geometry":{"type":"LineString","coordinates":[[19.81654,41.31897],[19.81505,41.31873],[19.81483,41.31873],[19.81446,41.31866],[19.81436,41.31861],[19.81432,41.31852],[19.81433,41.31847],[19.81437,41.31842],[19.81443,41.31839],[19.81457,41.31837],[19.8156,41.31462],[19.81584,41.31387]]}},{"type":"Feature","properties":{"stop_id":"node/11357319493","stop_name":"Rruga Peti","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81341,41.30701]}},{"type":"Feature","properties":{"stop_id":"node/11357307258","stop_name":"TEG (Tirana East Gate)","location_type":0,"parent_station":"relation/7886026","routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.85843,41.28299]}},{"type":"Feature","properties":{"stop_id":"node/11168397702","stop_name":"Petronini Luarasi","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81489,41.3174]}},{"type":"Feature","properties":{"stop_id":"node/10906723061","stop_name":"Barrikadat","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81812,41.33534]}},{"type":"Feature","properties":{"stop_id":"node/6328473158","stop_name":"TEG (Tirana East Gate)","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.85868,41.28303]}},{"type":"Feature","properties":{"stop_id":"node/5327403338","stop_name":"Selim Brahja","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.83509,41.3035]}},{"type":"Feature","properties":{"stop_id":"node/5327403336","stop_name":"Liqeni i Thatë","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81486,41.30575]}},{"type":"Feature","properties":{"stop_id":"node/5327403334","stop_name":"Kopshti Zoologjik","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81102,41.30904]}},{"type":"Feature","properties":{"stop_id":"node/5327403332","stop_name":"Rruga Kosovareve","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81408,41.31217]}},{"type":"Feature","properties":{"stop_id":"node/5327403330","stop_name":"Sheshi Willson","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81471,41.31763]}},{"type":"Feature","properties":{"stop_id":"node/5327361716","stop_name":"Selim Brahja","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.83663,41.30342]}},{"type":"Feature","properties":{"stop_id":"node/5327361714","stop_name":"Liqeni Thatë","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81581,41.30533]}},{"type":"Feature","properties":{"stop_id":"node/5327361712","stop_name":"Kopshti Zoologjik","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81098,41.30919]}},{"type":"Feature","properties":{"stop_id":"node/5327361710","stop_name":"Diga","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81476,41.31254]}},{"type":"Feature","properties":{"stop_id":"node/5321869053","stop_name":"Shallvaret","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81729,41.32397]}},{"type":"Feature","properties":{"stop_id":"node/5306289767","stop_name":"Shkencat e Natyrës","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81636,41.33523]}},{"type":"Feature","properties":{"stop_id":"node/5295459711","stop_name":"9 Katëshet","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.82151,41.32943]}},{"type":"Feature","properties":{"stop_id":"node/4437431032","stop_name":"Muzeu Kombëtar","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81655,41.33013]}},{"type":"Feature","properties":{"stop_id":"node/3983803723","stop_name":"Libri Universitar","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81824,41.31917]}},{"type":"Feature","properties":{"stop_id":"node/3983794253","stop_name":"Piramida","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.81978,41.32289]}},{"type":"Feature","properties":{"stop_id":"node/3983790103","stop_name":"Piramida","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.8201,41.32284]}},{"type":"Feature","properties":{"stop_id":"node/588878901","stop_name":"Rektorati","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.82179,41.31801]}},{"type":"Feature","properties":{"stop_id":"node/581363300","stop_name":"Libri Universitar","location_type":0,"routes":[{"route_id":"L2","agency_id":"AL-Tirana","route_short_name":"L2","route_long_name":"Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit","route_type":3,"route_url":"https://osm.org/relation/7886111","route_color":"#f06ebd","route_text_color":"#000000"}],"agency_name":"Tirana Public Transport"},"geometry":{"type":"Point","coordinates":[19.8182,41.31926]}}]};
-  createSystemMap('system_map', geojson);
-})();</script></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicG9tb2RvcmVuIiwiYSI6ImNscXNxbHgzNjRkbnoycXJxODB6b2F2ZTYifQ.yepzIdraeKMJ0QeCPKoWAA';
+  </script>
+  <script src="js/system-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container mx-4 h-screen items-stretch md:mx-auto md:flex">
+    <div class="overview-list flex-none md:overflow-y-scroll">
+      <h1 class="text-2xl pt-4 pb-2">Tirana Public Transport Routes</h1><a class="block p-2 border-b border-slate-200 hover:bg-slate-200 hover:no-underline" href="20231201-20241130/l21111110_l2_mon-sat.html" data-route-ids="L2">
+        <div class="text-lg text-gray-800 leading-none">Route L2</div>
+        <div class="flex my-1">
+          <div class="route-color-swatch flex-none mr-2" style="background-color: #f06ebd; color: #000000;">L2</div>
+          <div class="mt-1 text-gray-600 leading-none">Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit</div>
+        </div>
+        <div class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-slate-800 bg-slate-200 rounded-full">Mon-Sat</div>
+      </a>
+    </div>
+    <div class="map ml-4 h-full w-full" id="system_map"></div>
+    <script>
+      (function() {
+        var geojson = {
+          "type": "FeatureCollection",
+          "features": [{
+            "type": "Feature",
+            "properties": {
+              "agency_name": "Tirana Public Transport",
+              "route_id": "L2",
+              "agency_id": "AL-Tirana",
+              "route_short_name": "L2",
+              "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+              "route_type": 3,
+              "route_url": "https://osm.org/relation/7886111",
+              "route_color": "#f06ebd",
+              "route_text_color": "#000000"
+            },
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [19.85847, 41.28297],
+                [19.85731, 41.28194],
+                [19.85692, 41.28162],
+                [19.85684, 41.28157],
+                [19.85659, 41.28149],
+                [19.85646, 41.28146],
+                [19.85624, 41.28146],
+                [19.85612, 41.28148],
+                [19.85591, 41.28153],
+                [19.85571, 41.28163],
+                [19.85563, 41.2817],
+                [19.85548, 41.28186],
+                [19.85526, 41.28215],
+                [19.85518, 41.28233],
+                [19.8552, 41.28239],
+                [19.85516, 41.28246],
+                [19.8551, 41.2825],
+                [19.855, 41.2825],
+                [19.85485, 41.28254],
+                [19.85411, 41.28294],
+                [19.85395, 41.28306],
+                [19.85393, 41.28314],
+                [19.85388, 41.28322],
+                [19.8538, 41.2833],
+                [19.85366, 41.28337],
+                [19.85355, 41.28347],
+                [19.85349, 41.28355],
+                [19.85237, 41.28595],
+                [19.85225, 41.2861],
+                [19.85164, 41.28741],
+                [19.85126, 41.28815],
+                [19.85035, 41.28954],
+                [19.85003, 41.28996],
+                [19.84925, 41.2909],
+                [19.84744, 41.29273],
+                [19.8429, 41.29722],
+                [19.84131, 41.29871],
+                [19.83962, 41.30047],
+                [19.83876, 41.30141],
+                [19.83796, 41.30237],
+                [19.83774, 41.30258],
+                [19.83737, 41.30286],
+                [19.83707, 41.30304],
+                [19.83669, 41.30322],
+                [19.83624, 41.30337]
+              ]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "agency_name": "Tirana Public Transport",
+              "route_id": "L2",
+              "agency_id": "AL-Tirana",
+              "route_short_name": "L2",
+              "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+              "route_type": 3,
+              "route_url": "https://osm.org/relation/7886111",
+              "route_color": "#f06ebd",
+              "route_text_color": "#000000"
+            },
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [19.81654, 41.31897],
+                [19.81505, 41.31873],
+                [19.81483, 41.31873],
+                [19.81446, 41.31866],
+                [19.81436, 41.31861],
+                [19.81432, 41.31852],
+                [19.81433, 41.31847],
+                [19.81437, 41.31842],
+                [19.81443, 41.31839],
+                [19.81457, 41.31837],
+                [19.8156, 41.31462],
+                [19.81584, 41.31387]
+              ]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/11357319493",
+              "stop_name": "Rruga Peti",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81341, 41.30701]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/11357307258",
+              "stop_name": "TEG (Tirana East Gate)",
+              "location_type": 0,
+              "parent_station": "relation/7886026",
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.85843, 41.28299]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/11168397702",
+              "stop_name": "Petronini Luarasi",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81489, 41.3174]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/10906723061",
+              "stop_name": "Barrikadat",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81812, 41.33534]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/6328473158",
+              "stop_name": "TEG (Tirana East Gate)",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.85868, 41.28303]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327403338",
+              "stop_name": "Selim Brahja",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.83509, 41.3035]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327403336",
+              "stop_name": "Liqeni i Thatë",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81486, 41.30575]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327403334",
+              "stop_name": "Kopshti Zoologjik",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81102, 41.30904]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327403332",
+              "stop_name": "Rruga Kosovareve",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81408, 41.31217]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327403330",
+              "stop_name": "Sheshi Willson",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81471, 41.31763]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327361716",
+              "stop_name": "Selim Brahja",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.83663, 41.30342]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327361714",
+              "stop_name": "Liqeni Thatë",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81581, 41.30533]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327361712",
+              "stop_name": "Kopshti Zoologjik",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81098, 41.30919]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5327361710",
+              "stop_name": "Diga",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81476, 41.31254]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5321869053",
+              "stop_name": "Shallvaret",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81729, 41.32397]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5306289767",
+              "stop_name": "Shkencat e Natyrës",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81636, 41.33523]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/5295459711",
+              "stop_name": "9 Katëshet",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.82151, 41.32943]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/4437431032",
+              "stop_name": "Muzeu Kombëtar",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81655, 41.33013]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/3983803723",
+              "stop_name": "Libri Universitar",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81824, 41.31917]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/3983794253",
+              "stop_name": "Piramida",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.81978, 41.32289]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/3983790103",
+              "stop_name": "Piramida",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.8201, 41.32284]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/588878901",
+              "stop_name": "Rektorati",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.82179, 41.31801]
+            }
+          }, {
+            "type": "Feature",
+            "properties": {
+              "stop_id": "node/581363300",
+              "stop_name": "Libri Universitar",
+              "location_type": 0,
+              "routes": [{
+                "route_id": "L2",
+                "agency_id": "AL-Tirana",
+                "route_short_name": "L2",
+                "route_long_name": "Bus L2: TEG - Kopështi Zoologjik - Ish Stacioni i Trenit",
+                "route_type": 3,
+                "route_url": "https://osm.org/relation/7886111",
+                "route_color": "#f06ebd",
+                "route_text_color": "#000000"
+              }],
+              "agency_name": "Tirana Public Transport"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [19.8182, 41.31926]
+            }
+          }]
+        };
+        createSystemMap('system_map', geojson);
+      })();
+    </script>
+  </div>
+</body>
+
+</html>
