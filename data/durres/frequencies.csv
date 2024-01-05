@@ -1,2 +1,5 @@
 ref,from,to,via,intermediates,opening-hours,exceptions,duration,intermediate-durations,frequency
+L1,Plepa,Sheshi Pranvera,,,Mo-Sa 05:40-18:20;Mo-Sa 18:50,,35,,40
+L1,Plepa,Sheshi Pranvera,,,Su 06:20; Su 07:00-17:00;Su 17:40,,35,,40
 L1,Sheshi Pranvera,Plepa,,,Mo-Sa 06:15-18:55|19:25,,30,,60
+L1,Sheshi Pranvera,Plepa,,,Su 06:55; Su 07:35-17:35;Su 18:25,,30,,60
