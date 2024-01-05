@@ -8,6 +8,7 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="../js/timetable-menu.js"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicG9tb2RvcmVuIiwiYSI6ImNscXNxbHgzNjRkbnoycXJxODB6b2F2ZTYifQ.yepzIdraeKMJ0QeCPKoWAA';
@@ -16,8 +17,8 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
 </head>
 
-<body><!-- Timetable generated on Fri Jan 05 2024 21:25:43 GMT+0100 (Central European Standard Time) using GTFS-to-HTML version 2.5.7 -->
-  <div class="timetable-page menu-type-simple">
+<body><!-- Timetable generated on Sat Jan 06 2024 00:12:13 GMT+0100 (Central European Standard Time) using GTFS-to-HTML version 2.5.7 -->
+  <div class="timetable-page menu-type-radio">
     <div class="container mx-4 md:mx-auto">
       <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
         <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #de3163; color: #ffffff">L1</div>
@@ -65,11 +66,15 @@
                       [19.45056, 41.31848],
                       [19.45193, 41.31838],
                       [19.45217, 41.31833],
-                      [19.45252, 41.31828],
-                      [19.4526, 41.31824],
-                      [19.45289, 41.31821],
-                      [19.45307, 41.31823],
-                      [19.45324, 41.31823],
+                      [19.45255, 41.31827],
+                      [19.4526, 41.31825],
+                      [19.45261, 41.3182],
+                      [19.45264, 41.31816],
+                      [19.45274, 41.31812],
+                      [19.45282, 41.31814],
+                      [19.45289, 41.31819],
+                      [19.45298, 41.31822],
+                      [19.45331, 41.31823],
                       [19.45498, 41.31813],
                       [19.46008, 41.31778],
                       [19.46861, 41.31723],
@@ -269,6 +274,8 @@
                       [19.45999, 41.31788],
                       [19.45714, 41.31809],
                       [19.45315, 41.31833],
+                      [19.45275, 41.31834],
+                      [19.45268, 41.31833],
                       [19.45193, 41.31838]
                     ]
                   }
@@ -296,9 +303,21 @@
                       [19.44828, 41.3186],
                       [19.44809, 41.31865],
                       [19.44812, 41.31856],
-                      [19.44818, 41.31859],
                       [19.44828, 41.3186]
                     ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/4340766868",
+                    "stop_name": "Posta",
+                    "location_type": 0,
+                    "routes": ["L1"],
+                    "agency_name": "Durres Public Transport"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [19.49136, 41.30706]
                   }
                 }, {
                   "type": "Feature",
@@ -311,7 +330,7 @@
                   },
                   "geometry": {
                     "type": "Point",
-                    "coordinates": [19.508, 41.29237]
+                    "coordinates": [19.50793, 41.29241]
                   }
                 }, {
                   "type": "Feature",
@@ -329,15 +348,54 @@
                 }, {
                   "type": "Feature",
                   "properties": {
-                    "stop_id": "node/9077412017",
-                    "stop_name": "Galaktiku",
+                    "stop_id": "node/6857509185",
+                    "stop_name": "Ura e Dajlanit",
                     "location_type": 0,
                     "routes": ["L1"],
                     "agency_name": "Durres Public Transport"
                   },
                   "geometry": {
                     "type": "Point",
-                    "coordinates": [19.46453, 41.31748]
+                    "coordinates": [19.47001, 41.31618]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/6857509287",
+                    "stop_name": "Posta",
+                    "location_type": 0,
+                    "routes": ["L1"],
+                    "agency_name": "Durres Public Transport"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [19.49116, 41.30694]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/9077407120",
+                    "stop_name": "Stacioni i Trenit",
+                    "location_type": 0,
+                    "routes": ["L1"],
+                    "agency_name": "Durres Public Transport"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [19.45464, 41.31812]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "node/9077411918",
+                    "stop_name": "Ura e Dajlanit",
+                    "location_type": 0,
+                    "routes": ["L1"],
+                    "agency_name": "Durres Public Transport"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [19.46994, 41.31635]
                   }
                 }]
               }
@@ -350,200 +408,231 @@
             <caption class="sr-only">Route L1 - Sheshi Pranvera to Plepa | Mon-Sat</caption>
             <colgroup>
               <col class="stop-0" id="stop_id_node6851510709" data-stop-id="node/6851510709" data-is-timepoint="true">
-              <col class="stop-1" id="stop_id_node9077412017" data-stop-id="node/9077412017" data-is-timepoint="true">
-              <col class="stop-2" id="stop_id_node5666325029" data-stop-id="node/5666325029" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_node9077407120" data-stop-id="node/9077407120" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_node6857509185" data-stop-id="node/6857509185" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_node6857509287" data-stop-id="node/6857509287" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_node5666325029" data-stop-id="node/5666325029" data-is-timepoint="true">
             </colgroup>
             <thead>
               <tr>
-                <th class="stop-header" scope="col" width="33.33%">
+                <th class="stop-header" scope="col" width="20.00%">
                   <div class="stop-name">Sheshi Pranvera</div>
                   <div class="stop-code"></div>
                 </th>
-                <th class="stop-header" scope="col" width="33.33%">
-                  <div class="stop-name">Galaktiku</div>
+                <th class="stop-header" scope="col" width="20.00%">
+                  <div class="stop-name">Stacioni i Trenit</div>
                   <div class="stop-code"></div>
                 </th>
-                <th class="stop-header" scope="col" width="33.33%">
+                <th class="stop-header" scope="col" width="20.00%">
+                  <div class="stop-name">Ura e Dajlanit</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="20.00%">
+                  <div class="stop-name">Posta</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="20.00%">
                   <div class="stop-name">Plepa</div>
                   <div class="stop-code"></div>
                 </th>
               </tr>
             </thead>
             <tbody>
+              <tr class="trip-row" id="trip_id_0">
+                <td class="stop-time am"><span class="stop-time-text">5:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">5:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">5:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:15am</span></td>
+              </tr>
               <tr class="trip-row" id="trip_id_27">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time am"><span class="stop-time-text">5:40am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_0">
-                <td class="stop-time am"><span class="stop-time-text">6:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">6:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">6:45am</span></td>
+              <tr class="trip-row" id="trip_id_1">
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:15am</span></td>
               </tr>
               <tr class="trip-row" id="trip_id_28">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time am"><span class="stop-time-text">6:20am</span></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_1">
-                <td class="stop-time am"><span class="stop-time-text">7:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">7:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+              <tr class="trip-row" id="trip_id_2">
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:15am</span></td>
               </tr>
               <tr class="trip-row" id="trip_id_29">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time am"><span class="stop-time-text">7:00am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_30">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_2">
-                <td class="stop-time am"><span class="stop-time-text">8:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">8:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">8:45am</span></td>
+              <tr class="trip-row" id="trip_id_3">
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:15am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_30">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4">
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:15am</span></td>
               </tr>
               <tr class="trip-row" id="trip_id_31">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time am"><span class="stop-time-text">8:20am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_3">
-                <td class="stop-time am"><span class="stop-time-text">9:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">9:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">9:45am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_32">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_33">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_4">
-                <td class="stop-time am"><span class="stop-time-text">10:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">10:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">10:45am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_34">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time am"><span class="stop-time-text">10:20am</span></td>
-              </tr>
               <tr class="trip-row" id="trip_id_5">
-                <td class="stop-time am"><span class="stop-time-text">11:15am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">11:21am</span></td>
-                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_35">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">10:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
                 <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:15am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_36">
+              <tr class="trip-row" id="trip_id_32">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time am"><span class="stop-time-text">10:40am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_6">
+                <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_33">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_6">
-                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">12:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">12:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_37">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td>
-              </tr>
               <tr class="trip-row" id="trip_id_7">
-                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">1:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">1:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_38">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
                 <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_39">
+              <tr class="trip-row" id="trip_id_34">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_8">
+                <td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_35">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_8">
-                <td class="stop-time pm"><span class="stop-time-text">2:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">2:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_40">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td>
-              </tr>
               <tr class="trip-row" id="trip_id_9">
-                <td class="stop-time pm"><span class="stop-time-text">3:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">3:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">3:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_41">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:50pm</span></td>
                 <td class="stop-time pm"><span class="stop-time-text">3:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:15pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_42">
+              <tr class="trip-row" id="trip_id_36">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_10">
+                <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_37">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_10">
-                <td class="stop-time pm"><span class="stop-time-text">4:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">4:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">4:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_43">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
-              </tr>
               <tr class="trip-row" id="trip_id_11">
-                <td class="stop-time pm"><span class="stop-time-text">5:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">5:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">5:45pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_44">
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
                 <td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:15pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_45">
+              <tr class="trip-row" id="trip_id_38">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_12">
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_39">
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
+                <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_12">
-                <td class="stop-time pm"><span class="stop-time-text">6:15pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">6:21pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">6:45pm</span></td>
+              <tr class="trip-row" id="trip_id_13">
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:25pm</span></td>
               </tr>
-              <tr class="trip-row" id="trip_id_46">
+              <tr class="trip-row" id="trip_id_40">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
-                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_47">
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time skipped"><span class="stop-time-text"></span><a class="symbol" href="#note-L1|1111110-no-service">—</a></td>
                 <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
-              </tr>
-              <tr class="trip-row" id="trip_id_13">
-                <td class="stop-time pm"><span class="stop-time-text">7:25pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">7:31pm</span></td>
-                <td class="stop-time pm"><span class="stop-time-text">7:55pm</span></td>
               </tr>
             </tbody>
           </table>
