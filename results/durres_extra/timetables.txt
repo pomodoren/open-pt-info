@@ -1,0 +1,5 @@
+timetable_id,route_id,direction_id,start_date,end_date,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_time,end_time,include_exceptions,timetable_label,service_notes,orientation,timetable_page_id,timetable_sequence,direction_name,show_trip_continuation
+0,L1,0,20240101,20241231,1,1,1,1,1,0,0,,,0,Dite Jave,Mund te kete vonesa,vertical,1,0,Java,0
+1,L1,0,20240101,20241231,0,0,0,0,0,1,1,,,0,Fundjave,Mund te kete vonesa,vertical,2,1,Fundjava,0
+2,L1,1,20240101,20241231,1,1,1,1,1,0,0,,,0,Dite Jave,Mund te kete vonesa,vertical,1,0,Java,0
+3,L1,1,20240101,20241231,0,0,0,0,0,1,1,,,0,Fundjave,Mund te kete vonesa,vertical,2,1,Fundjava,0

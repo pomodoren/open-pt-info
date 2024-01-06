@@ -1,5 +1,5 @@
 ref,from,to,via,intermediates,opening-hours,exceptions,duration,intermediate-durations,frequency
-L1,Plepa,Sheshi Pranvera,,Posta;Ura e Dajlanit,Mo-Sa 05:40-18:20;Mo-Sa 18:50,,35,10;20,60
-L1,Plepa,Sheshi Pranvera,,Posta;Ura e Dajlanit,Su 06:20; Su 07:00-17:00;Su 17:40,,35,10;20,60
 L1,Sheshi Pranvera,Plepa,,Ura e Dajlanit;Posta,Mo-Sa 05:40-18:20;Mo-Sa 18:50,,35,10;20,60
 L1,Sheshi Pranvera,Plepa,,Ura e Dajlanit;Posta,Su 06:20; Su 07:00-17:00;Su 17:40,,35,10;20,60
+L1,Plepa,Sheshi Pranvera,,Posta;Ura e Dajlanit,Mo-Sa 06:40-18:20;Mo-Sa 18:50,,35,10;20,45
+L1,Plepa,Sheshi Pranvera,,Posta;Ura e Dajlanit,Su 07:20; Su 07:00-17:00;Su 17:40,,35,10;20,45
