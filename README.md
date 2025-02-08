@@ -1,4 +1,6 @@
-# freeBus
+# Open Public Transport Info
+
+A tool to build your own public transport information material based on OSM and a simple frequency-based sheet. 
 
 <br>
 
@@ -10,7 +12,6 @@
 
 
 ### Sneak Peek
-
 
 
 | Example| Example per line |
